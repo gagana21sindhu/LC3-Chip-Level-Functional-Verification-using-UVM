@@ -1,0 +1,83 @@
+uvmf:
+  interfaces:
+    decode_out:
+      clock: clock
+      config_constraints: []
+      config_vars: []
+      existing_library_component: 'True'
+      gen_inbound_streaming_driver: 'False'
+      hdl_pkg_parameters: []
+      hdl_typedefs:
+      - name: ir_t
+        type: bit [15:0]
+      - name: npc_out_t
+        type: bit [15:0]
+      - name: E_control_t
+        type: bit [5:0]
+      - name: W_control_t
+        type: bit [1:0]
+      - name: mem_control_t
+        type: bit
+      hvl_pkg_parameters: []
+      hvl_typedefs: []
+      parameters: []
+      ports:
+      - dir: input
+        name: enable_decode
+        reset_value: '''b0'
+        width: '1'
+      - dir: output
+        name: IR
+        reset_value: '''b0'
+        width: '16'
+      - dir: output
+        name: npc_out
+        reset_value: '''b0'
+        width: '16'
+      - dir: output
+        name: E_control
+        reset_value: '''b0'
+        width: '6'
+      - dir: output
+        name: W_control
+        reset_value: '''b0'
+        width: '2'
+      - dir: output
+        name: mem_control
+        reset_value: '''b0'
+        width: '1'
+      reset: reset
+      reset_assertion_level: 'True'
+      transaction_constraints: []
+      transaction_vars:
+      - comment: ''
+        iscompare: 'True'
+        isrand: 'False'
+        name: IR
+        type: ir_t
+        unpacked_dimension: ''
+      - comment: ''
+        iscompare: 'True'
+        isrand: 'False'
+        name: npc_out
+        type: npc_out_t
+        unpacked_dimension: ''
+      - comment: ''
+        iscompare: 'True'
+        isrand: 'False'
+        name: E_control
+        type: E_control_t
+        unpacked_dimension: ''
+      - comment: ''
+        iscompare: 'True'
+        isrand: 'False'
+        name: W_control
+        type: W_control_t
+        unpacked_dimension: ''
+      - comment: ''
+        iscompare: 'True'
+        isrand: 'False'
+        name: mem_control
+        type: mem_control_t
+        unpacked_dimension: ''
+      use_dpi_link: 'False'
